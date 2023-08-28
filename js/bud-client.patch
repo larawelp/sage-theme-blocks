@@ -1,0 +1,14 @@
+diff --git a/node_modules/@roots/bud-client/lib/hot/client.js b/node_modules/@roots/bud-client/lib/hot/client.js
+index a3a957a..a0c5558 100644
+--- a/node_modules/@roots/bud-client/lib/hot/client.js
++++ b/node_modules/@roots/bud-client/lib/hot/client.js
+@@ -104,6 +104,10 @@ export const client = (queryString, webpackHot) => __awaiter(void 0, void 0, voi
+     /* Instantiate indicator, overlay */
+     yield components.make(options);
+     /* Instantiate eventSource */
++    if(typeof window.configureBudClient !== 'undefined') {
++        window.configureBudClient(options);
++    }
+     const events = injectEvents(EventSource).make(options);
+     if (!window.bud.listeners[options.name]) {
+         window.bud.listeners[options.name] = (payload) => __awaiter(void 0, void 0, void 0, function* () {

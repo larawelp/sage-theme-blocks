@@ -1,0 +1,30 @@
+{
+  "name": "larawelp/sage-theme-blocks",
+  "description": "Allows WP theme blocks to be in resources/views",
+  "type": "package",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "LaraWelP\\SageThemeBlocks\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Filip Pacurar",
+      "email": "filip@pacurar.net"
+    }
+  ],
+  "require": {},
+  "extra": {
+    "acorn": {
+      "providers": [
+        "LaraWelP\\SageThemeBlocks\\ServiceProvider"
+      ]
+    },
+    "laravel": {
+      "providers": [
+        "LaraWelP\\SageThemeBlocks\\ServiceProvider"
+      ]
+    }
+  }
+}
